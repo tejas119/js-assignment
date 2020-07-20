@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h2>Enter your marks to check your result:</h2>
+    Marks: <input type="number" id="myNumber">
+    <button onclick="myFunction()">Submit</button>
+    <p id="demo"></p>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myNumber").value;
+            var result;
+
+            switch(true) {
+                case x >= 90 && x <=100:
+                result = "Marks are "+x+" and grade is A+";
+                break;
+
+                case x >=70  && x <90:
+                result = "Marks are "+x+" and grade is A";
+                break;
+
+                case x >=60  && x <70:
+                result = "Marks are "+x+" and grade is B+";
+                break;
+
+                case x >=50 && x <60:
+                result = "Marks are "+x+" and grade is B";
+                break;
+
+                case x >=40 && x<50:
+                result = "Marks are "+x+" and grade is c+";
+                break;
+
+                case x >=30 && x<40:
+                result = "Marks are "+x+" and grade is c";
+                break;
+
+                case x <30:
+                result = "Marks are "+x+" you are fail";
+                break;
+
+                default:
+                result = "Wrong Number";
+            }
+            document.getElementById("demo").innerHTML = result;
+            confirm("Are you a Student");
+        }
+
+    </script>
+</body>
+</html>
