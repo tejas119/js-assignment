@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    Number: <input type="number" id="myNumber">
+    <button onclick="myFunction()">Submit</button>
+    <p id="demo"></p>
+    <script>
+    function myFunction() {
+        var x = document.getElementById("myNumber").value;
+        var result;
+        // document.getElementById("demo").innerHTML=x;
+        // console.log(x);
+
+        if( x % 2 == 0 ) {
+            result = "The number entered is "+x+" and Number is Even";
+            console.log(result);
+        }
+        else
+        {
+            result ="The number entered is "+x+" and Number is odd";
+            console.log(result);
+        }
+        
+        document.getElementById("demo").innerHTML=result;
+    }
+    
+</script>
+</body>
+</html>
